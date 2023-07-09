@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200&display=swap');
+
 body {
-    background-image: url("../img/background.jpg");
+    display: flex;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    justify-content: center;
+    background: url(https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg);
+    background-position: center;
     background-size: cover;
 }
 
 #keyboard {
-    position: absolute;
-    top: 160px;
-    left: 300px;
-    right: 660px;
-    bottom: 480px;
-    width: 100%;
-    align-items: center;
+    position: initial;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
 }
 
 .hitbutton {
+    margin-right: 0px;
     user-select: none;
     cursor: pointer;
     border: solid #131313;
@@ -21,18 +27,29 @@ body {
     float: left;
     width: 50px;
     height: 50px;
-    margin-right: 50px;
-    color: wheat;
     justify-content: center;
     align-items: center;
     display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px black;
+    transition: transform 0.1s, box-shadow 0.1s; 
 }
+
+.pressed {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 13px yellow;
+}
+
 .nameofbutton {
-    color: cadetblue;
-    font-family: "Helvetica Neue", sans-serif;
+    color: yellow;
+    font-family: 'Martian Mono';
+}
+
+.pressed {
+    border: solid rgb(19, 19, 19);transform: scale(0.9);transition: transform 1s;
 }
 
 .textin {
     font-size: 25px;
-
 }

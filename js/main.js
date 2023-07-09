@@ -1,116 +1,79 @@
+function playSound(soundname) {
+    var hitbutton = document.getElementById(soundname);
+    hitbutton.classList.add("pressed");
+    var newAd = new Audio("sounds/" + soundname + ".wav");
+    newAd.play();
+    return;
+}
+
+function unplaySound(soundname) {
+    var hitbutton = document.getElementById(soundname);
+    hitbutton.classList.remove("pressed");
+}
+
 document.addEventListener("keydown", function (event) {
     switch (event.key) {
         case "a":
-            var hitbutton = document.getElementById("clap");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("aclap").play();
+            playSound("clap");
             break;
         case "s":
-            var hitbutton = document.getElementById("hihat");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("ahihat").play();
+            playSound("hihat");
             break;
-
         case "d":
-            var hitbutton = document.getElementById("kick");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("akick").play();
+            playSound("kick");
             break;
-
         case "f":
-            var hitbutton = document.getElementById("openhat");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("aopenhat").play();
+            playSound("openhat");
             break;
-
         case "g":
-            var hitbutton = document.getElementById("boom");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("aboom").play();
+            playSound("boom");
             break;
-
         case "h":
-            var hitbutton = document.getElementById("ride");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("aride").play();
+            playSound("ride");
             break;
-
         case "j":
-            var hitbutton = document.getElementById("snare");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("asnare").play();
+            playSound("snare");
             break;
-
         case "k":
-            var hitbutton = document.getElementById("tom");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("atom").play();
+            playSound("tom");
             break;
-
         case "l":
-            var hitbutton = document.getElementById("tink");
-            hitbutton.style.border = "12px solid #1C08A2";
-            document.getElementById("atink").play();
+            playSound("tink");
             break;
         default:
             break;
-
     }
 })
 document.addEventListener("keyup", function (event) {
     switch (event.key) {
         case "a":
-            var hitbutton = document.getElementById("clap");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("aclap").currentTime = 0;
-            // document.getElementById("aclap").pause();
+            unplaySound("clap");
             break;
         case "s":
-            var hitbutton = document.getElementById("hihat");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("ahihat").currentTime = 0;
-            // document.getElementById("ahihat").pause();
+            unplaySound("hihat");
             break;
         case "d":
-            var hitbutton = document.getElementById("kick");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("akick").currentTime = 0;
-            // document.getElementById("akick").pause();
+            unplaySound("kick");
             break;
         case "f":
-            var hitbutton = document.getElementById("openhat");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("aopenhat").currentTime = 0;
-            // document.getElementById("aopenhat").pause();
+            unplaySound("openhat");
             break;
         case "g":
-            var hitbutton = document.getElementById("boom");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("aboom").currentTime = 0;
-            // document.getElementById("aboom").pause();
+            unplaySound("boom");
             break;
         case "h":
-            var hitbutton = document.getElementById("ride");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("aride").currentTime = 0;
-            // document.getElementById("aride").pause();
+            unplaySound("ride");
             break;
         case "j":
-            var hitbutton = document.getElementById("snare");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("asnare").currentTime = 0;
-            // document.getElementById("aclap").pause();
+            unplaySound("snare");
             break;
         case "k":
-            var hitbutton = document.getElementById("tom");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("atom").currentTime = 0;
-            // document.getElementById("atom").pause();
+            unplaySound("tom");
             break;
         case "l":
-            var hitbutton = document.getElementById("tink");
-            hitbutton.style.border = "solid #131313";
-            // document.getElementById("atink").currentTime = 0;
-            // document.getElementById("atink").pause();
+            unplaySound("tink");
+            break;
+        default:
+            break;
     }
 })
