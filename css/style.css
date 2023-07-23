@@ -53,3 +53,13 @@ body {
 .textin {
     font-size: 25px;
 }
+.what-is-this {
+    text-align: center;
+    direction: ltr;
+    display: block;
+    padding-top: 130px;
+    color: rgba(255,255,255,.3);
+    font-size: 15px;
+    margin: 0 auto;
+    font-weight: 400;
+}
